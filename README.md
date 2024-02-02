@@ -54,6 +54,7 @@ ejemplo07
 	Estado de los objetos persistentes
 
 ejemplo08
+
 	Herencia. Estrategia Single Table
 	En la clase madre:
 		@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -63,9 +64,11 @@ ejemplo08
 		@DiscriminatorValue("valor")
 
 ejemplo09
+
 	Herencia. Estrategia Joined
 	
 ejemplo10
+
 	Relacion uno a uno. Unidireccinal y bidireccional
 	@OneToOne
 	@JoinColumn(name = "nombre_fk")
@@ -73,6 +76,7 @@ ejemplo10
 	@OneToOne(mappedBy = "nombre_atributo_con_JoinColumn)
  
 ejemplo11
+
 	Colecciones de Tipos Basicos (Integer, Double, String, ...)
  	@ElementCollection
 	@CollectionTable(name = "nombre_tabla_coleccion", joinColumns = {@JoinColumn(name="nombre_fk_1"),@JoinColumn(name="nombre_fk_2(si es compuesta)")})
@@ -81,6 +85,7 @@ ejemplo11
 	@ElementCollection(fetch = fetchType.EAGER)
 	
 ejemplo12
+
 	Relaciones Muchos a Uno unidireccional. (ManyToOne)
 	@ManyToOne
 	@JoinColumn(name = "nombre_fk")
