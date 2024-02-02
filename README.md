@@ -1,4 +1,5 @@
 ejemplo01
+
 	Clase simple con nombres iguales a la tabla
 	@Entity
 	@Id
@@ -10,6 +11,7 @@ ejemplo01
 			Hibernate lo resuelve igual que TABLE
 	
 ejemplo02
+
 	Clase simple que no coinciden los nombres
 	@Table(name = "nombre_tabla")
 	@Column(name = "nombre_columna_tabla")
@@ -18,6 +20,7 @@ ejemplo02
 	@Enumerated(EnumType.ORDINAL) -> Alamacena el ordinal (comportamiento por defecto)
 	
 ejemplo03
+
 	Utilizamos un insertable.
 	Clases con una relacion uno a uno. Una sóla tabla
 	@Embeddable
@@ -25,18 +28,21 @@ ejemplo03
 	@AttributeOverride(name="nombre_atributo", column=@Column(name="nombre_columna_tabla"))
 
 ejemplo04
+
 	PK compuesta.
 	Caso múltimples Id. La clase tiene los atributos que forman la clave primaria
 	Utilizamos multiples @Id
 	@IdClass(NombreClasePK.class) (Debemos crear una clase que representa la PK)
 	
 ejemplo05
+
 	PK compuesta.
 	Caso Id insertable. La calse tiene una referencia a la clase de PK.
 	La clase PK se anota como @Embeddable
 	El atributo PK se anota como @EmbeddedId
 	
 ejemplo06
+
 	Tipos de acceso.
 	FIELD access. JPA accede a traves de los atributos.
 	PROPERTY access. Accede a traves de los getters y setters.
@@ -44,6 +50,7 @@ ejemplo06
 	@Transient. Ignora el atributo o la propiedad.
 
 ejemplo07
+
 	Estado de los objetos persistentes
 
 ejemplo08
